@@ -1,0 +1,12 @@
+.wrapper-filmdetail{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-filmdetail p,h2{
+  max-width: 50%;
+  text-align: center;
+}
+

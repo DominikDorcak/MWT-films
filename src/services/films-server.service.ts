@@ -60,7 +60,13 @@ export class FilmsServerService {
       .get<FilmsResponse>(this.url, httpOptions)
       .pipe(tap(resp => console.log(resp)));
   }
+
+  getFilm(id: number){
+    let httpOptions = this.getHeader();
+    return this.http.get<Film>(this.url + "/" + id,httpOptions)
+  }
 }
+
 
 export interface FilmsResponse {
   items: Film[];

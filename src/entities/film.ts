@@ -2,6 +2,8 @@ import { Clovek } from "./clovek";
 import { Postava } from "./postava";
 
 export class Film {
+  nazov: string;
+  slovenskyNazov: any;
   constructor(
     nazov: string,
     rok: number,

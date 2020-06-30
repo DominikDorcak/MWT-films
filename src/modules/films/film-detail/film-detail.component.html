@@ -1,1 +1,9 @@
-<p>film-detail works!</p>
+
+<div *ngIf="this.imovie" class="wrapper-filmdetail">
+  <H2>Detail filmu: {{this.film.nazov}} ({{this.film.slovenskyNazov}})</H2>
+  <img src="{{this.imovie.Poster}}" alt="Poster"/>
+  <p><strong>Plot: </strong>{{this.imovie.Plot}}</p>
+  <p><strong>Dĺžka: </strong> {{this.imovie.Runtime}}</p>
+  <p><strong>Režisér: </strong> {{this.imovie.Director}}</p>
+  <p><strong>Hrajú: </strong> {{this.imovie.Actors}}</p>
+</div>

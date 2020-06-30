@@ -27,7 +27,8 @@ export class FilmsListComponent implements OnInit, AfterViewInit {
     "slovenskyNazov",
     "rok",
     "afi1998",
-    "afi2007"
+    "afi2007",
+    "actions"
   ];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;

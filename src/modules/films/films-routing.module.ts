@@ -4,6 +4,8 @@ import { FilmsMenuComponent } from "./films-menu/films-menu.component";
 import { FilmEditComponent } from "./film-edit/film-edit.component";
 import { FilmsListComponent } from "./films-list/films-list.component";
 import { FilmDetailComponent } from "./film-detail/film-detail.component";
+import {UserResolverService} from "../../guards/user-resolver.service";
+import {FilmResolverService} from "../../guards/film-resolver.service";
 
 const routes: Routes = [
   {
@@ -13,10 +15,17 @@ const routes: Routes = [
       { path: "edit/:id", component: FilmEditComponent },
       {
         path: "",
-        component: FilmsListComponent,
-        children: [{ path: ":id", component: FilmDetailComponent }]
+        component: FilmsListComponent
+        // children: [{ path: ":id", component: FilmDetailComponent }]
       }
     ]
+  },
+  {
+    path: "detail/:id",
+    component: FilmDetailComponent,
+    resolve: {
+      film: FilmResolverService
+    }
   }
 ];
 
